@@ -5,7 +5,7 @@ description: Extract structured information from an academic research paper and 
 
 # Paper Matrix Extract
 
-This skill extracts key structural information from an academic paper and formats it as a **single literature matrix row**.
+This skill extracts key structural information from an academic paper and formats it as **ONE literature matrix row**.
 
 The purpose is **rapid literature screening**, not deep analysis.
 
@@ -16,23 +16,23 @@ Use this skill when the user:
 - asks to extract literature information
 - wants to fill a literature review matrix
 
-The output should help the user quickly build a **literature database in Excel**.
+The output should help the user quickly build a **literature database in Excel or Notion**.
 
 ---
 
 # Extraction Principles
 
-Focus on **core research structure**.
-
-Do NOT generate long summaries.
+Focus on **core research structure**, not full summarization.
 
 Prefer **short phrases**.
 
+Do NOT generate long explanations.
+
 If information is missing in the paper, write:
 
-"未明确说明"
+未明确说明
 
-Whenever possible identify the section:
+When extracting information, prioritize the following sections:
 
 Introduction  
 Literature Review  
@@ -44,16 +44,42 @@ Results
 
 # Output Format
 
-Always output **ONE table row**.
+Always output **ONE single row only**.
 
-| Paper | Year | Country/Region | Data Source | Sample / Unit | Theory | Research Question | DV | Main IV | Controls | Mechanism | Method Type | Model Specification | Identification Strategy | Main Findings | Contribution | Key Theory References | Closely Related Studies | Research Gap | Priority | Read Status |
+Do not add explanations before or after the row.
+
+Use **TSV format (Tab-Separated Values)** so the user can paste directly into Excel.
+
+Column order must match exactly:
+
+Paper  
+Year  
+Country/Region  
+Data Source  
+Sample / Unit  
+Theory  
+Research Question  
+DV  
+Main IV  
+Controls  
+Mechanism  
+Method Type  
+Model Specification  
+Identification Strategy  
+Main Findings  
+Contribution  
+Key Theory References  
+Closely Related Studies  
+Research Gap  
+Priority  
+Read Status
 
 ---
 
 # Field Guidelines
 
 Paper  
-Author + year
+Author + year (e.g. Carling 2002)
 
 Year  
 Publication year
@@ -71,7 +97,7 @@ Theory
 Conceptual or theoretical framework used
 
 Research Question  
-Main research question addressed by the paper
+Main question addressed by the study
 
 DV  
 Dependent variable
@@ -95,7 +121,7 @@ Identification Strategy
 IV / natural experiment / matching / none etc.
 
 Main Findings  
-Key empirical results (short bullet style phrases)
+Key empirical results (short phrases)
 
 Contribution  
 Main contribution claimed by the authors
@@ -107,10 +133,9 @@ Closely Related Studies
 Empirical papers addressing a similar question
 
 Research Gap  
-What the paper does not address or remaining questions
+Remaining unanswered questions
 
 Priority  
-Evaluate importance for deeper reading:
 
 High — core theory or key empirical study  
 Medium — useful supporting literature  
@@ -118,6 +143,4 @@ Low — peripheral background literature
 
 Read Status  
 
-Not read — only extracted  
-Skimmed — quick scan  
-Deep read — fully analyzed later
+Default value: Not read
