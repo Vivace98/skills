@@ -13,23 +13,26 @@ Purpose: rapid literature screening.
 
 # Strict Output Rules
 
-The output must contain exactly TWO lines only:
+Output must be contained in exactly ONE code block only.
+
+Inside the code block, output exactly TWO lines only:
 
 Line 1 = column names  
 Line 2 = extracted values
 
-No explanations.  
-No extra lines.  
-No formatting.
+Outside the code block, output nothing.
 
-Use TSV (Tab-Separated Values).
+Use raw TSV (Tab-Separated Values).
 
-Always separate columns using TAB characters, not spaces.
+Use literal TAB characters between columns.
+
+Do NOT use spaces to simulate columns.
+
+Do NOT align text manually.
 
 Every column must contain exactly one value.
 
-If information is missing → write:
-
+If information is missing, write:
 none
 
 Do NOT skip columns.
@@ -38,7 +41,9 @@ The number of values in Line 2 must exactly equal the number of columns in Line 
 
 Do not use line breaks inside cells.
 
-If multiple items appear in one cell, separate them with semicolons.
+If multiple items belong in one cell, separate them with semicolons.
+
+Do not add bullets, numbering, explanations, labels, or notes.
 
 ---
 
@@ -78,9 +83,9 @@ The output must exactly match this column order.
 
 Use short phrases only.
 
-Avoid sentences.
+Avoid full sentences when possible.
 
-Prefer keywords.
+Prefer compact keywords.
 
 Focus on:
 
@@ -97,7 +102,7 @@ Results
 Individual  
 Household  
 Regional  
-Country  
+Country
 
 ---
 
@@ -138,7 +143,9 @@ Probit
 OLS  
 Hazard model  
 Fixed effects  
-Random effects
+Random effects  
+Multinomial logit  
+Linear probability model
 
 ---
 
@@ -148,20 +155,19 @@ IV
 Natural experiment  
 Matching  
 Panel fixed effects  
+Sister fixed effects  
 none
 
 ---
 
 # Priority
 
-High — core theory or key empirical study  
-Medium — useful supporting literature  
-Low — peripheral background literature
+High = core theory or key empirical study  
+Medium = useful supporting literature  
+Low = peripheral background literature
 
 ---
 
 # Read Status
 
-Default:
-
-Not read
+Default = Not read
