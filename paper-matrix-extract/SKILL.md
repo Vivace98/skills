@@ -7,55 +7,34 @@ description: Extract structured information from an academic research paper and 
 
 This skill extracts key structural information from an academic paper and formats it as a **literature matrix entry for Excel**.
 
-The purpose is **rapid literature screening**, not deep analysis.
-
-Use this skill when the user:
-
-- uploads a research paper
-- pastes a paper abstract
-- asks to extract literature information
-- wants to fill a literature review matrix
-
-The output helps the user build a **structured literature database**.
+Purpose: **rapid literature screening**.
 
 ---
 
-# Extraction Principles
+# Strict Output Rules
 
-Focus on **core research structure**.
-
-Prefer **short phrases**.
-
-Do NOT generate long explanations.
-
-If information is missing in the paper, write:
-
-none
-
-When extracting information, prioritize:
-
-Introduction  
-Literature Review  
-Data  
-Methods  
-Results  
-
----
-
-# Output Format
-
-Always output **exactly TWO lines only**.
+The output must contain **exactly TWO lines only**:
 
 Line 1 = column names  
 Line 2 = extracted values
 
-Use **TSV format (Tab-Separated Values)** so it can be pasted directly into Excel.
+No explanations.  
+No extra lines.  
+No formatting.
 
-Do NOT add explanations before or after the two lines.
+Use **TSV (Tab-Separated Values)**.
+
+Every column must have **one value**.
+
+If information is missing → write:
+
+none
+
+Do NOT skip columns.
 
 ---
 
-# Line 1 (Column Names)
+# Column Order (STRICT)
 
 Paper  
 Year  
@@ -80,25 +59,27 @@ Research Gap
 Priority  
 Read Status
 
----
-
-# Line 2 (Extracted Information)
-
-Extract corresponding information from the paper.
-
-Rules:
-
-• Use **short phrases**  
-• If missing → **none**  
-• Maintain exact column alignment
+The output must **exactly match this column order**.
 
 ---
 
-# Outcome Type Guidelines
+# Extraction Principles
 
-Identify the **type of outcome studied**.
+• Use **short phrases only**  
+• Avoid sentences  
+• Prefer keywords
 
-Examples:
+Focus on:
+
+Introduction  
+Literature Review  
+Data  
+Methods  
+Results
+
+---
+
+# Outcome Type Examples
 
 Migration aspiration  
 Migration intention  
@@ -116,7 +97,7 @@ Regression
 Event history analysis  
 Multilevel model  
 Qualitative analysis  
-Mixed methods  
+Mixed methods
 
 ---
 
@@ -127,7 +108,7 @@ Probit
 OLS  
 Hazard model  
 Fixed effects  
-Random effects  
+Random effects
 
 ---
 
@@ -137,7 +118,7 @@ IV
 Natural experiment  
 Matching  
 Panel fixed effects  
-none  
+none
 
 ---
 
@@ -145,10 +126,12 @@ none
 
 High — core theory or key empirical study  
 Medium — useful supporting literature  
-Low — peripheral background literature  
+Low — peripheral background literature
 
 ---
 
 # Read Status
 
-Default value = Not read
+Default:
+
+Not read
