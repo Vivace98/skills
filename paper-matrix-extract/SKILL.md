@@ -204,3 +204,26 @@ Before outputting, verify all of the following:
 5. No cell is empty.
 6. Any missing information is written as none.
 7. Read Status is Not read.
+
+---
+
+# Output Template (Fill Only)
+
+Always output using the following template.
+
+Do NOT change column order.
+
+Do NOT change column names.
+
+Replace the bracket values only.
+
+If information is missing, replace with:
+
+none
+
+Return the result inside one code block.
+
+Template:
+
+Paper	Year	Country/Region	Data Source	Data Type	Sample / Unit	Level of Analysis	Gender Focus	Theory	Research Question	Outcome Type	DV	Main IV	Controls	Mechanism	Method Type	Model Specification	Identification Strategy	Main Findings	Contribution	Key Theory References	Closely Related Studies	Research Gap	Priority	Read Status
+[Paper]	[Year]	[Country/Region]	[Data Source]	[Data Type]	[Sample / Unit]	[Level of Analysis]	[Gender Focus]	[Theory]	[Research Question]	[Outcome Type]	[DV]	[Main IV]	[Controls]	[Mechanism]	[Method Type]	[Model Specification]	[Identification Strategy]	[Main Findings]	[Contribution]	[Key Theory References]	[Closely Related Studies]	[Research Gap]	[Priority]	Not read
