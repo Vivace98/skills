@@ -1,5 +1,5 @@
 ---
-name: dialogue-learning
+name: english-dialogue-learning
 description: Analyze dialogue scripts to explain verbs, collocations, and sentence patterns using native-speaker thinking. Focus on B2+ expressions and spoken English patterns.
 ---
 
