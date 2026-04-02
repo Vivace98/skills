@@ -1,5 +1,5 @@
 ---
-name: italian-text-scanner
+name: i-text-learning
 description: Scan Italian text, dialogue, or subtitles and extract verbs with conjugations, common nouns with gender, adjectives, and unique grammar patterns for language learning.
 ---
 
