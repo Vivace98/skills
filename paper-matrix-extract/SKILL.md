@@ -5,15 +5,15 @@ description: Extract structured information from an academic research paper and 
 
 # Paper Matrix Extract
 
-This skill extracts key structural information from an academic paper and formats it as a **literature matrix entry for Excel**.
+This skill extracts key structural information from an academic paper and formats it as a literature matrix entry for Excel.
 
-Purpose: **rapid literature screening**.
+Purpose: rapid literature screening.
 
 ---
 
 # Strict Output Rules
 
-The output must contain **exactly TWO lines only**:
+The output must contain exactly TWO lines only:
 
 Line 1 = column names  
 Line 2 = extracted values
@@ -22,15 +22,23 @@ No explanations.
 No extra lines.  
 No formatting.
 
-Use **TSV (Tab-Separated Values)**.
+Use TSV (Tab-Separated Values).
 
-Every column must have **one value**.
+Always separate columns using TAB characters, not spaces.
+
+Every column must contain exactly one value.
 
 If information is missing → write:
 
 none
 
 Do NOT skip columns.
+
+The number of values in Line 2 must exactly equal the number of columns in Line 1.
+
+Do not use line breaks inside cells.
+
+If multiple items appear in one cell, separate them with semicolons.
 
 ---
 
@@ -42,6 +50,8 @@ Country/Region
 Data Source  
 Data Type  
 Sample / Unit  
+Level of Analysis  
+Gender Focus  
 Theory  
 Research Question  
 Outcome Type  
@@ -60,15 +70,17 @@ Research Gap
 Priority  
 Read Status
 
-The output must **exactly match this column order**.
+The output must exactly match this column order.
 
 ---
 
 # Extraction Principles
 
-• Use **short phrases only**  
-• Avoid sentences  
-• Prefer keywords
+Use short phrases only.
+
+Avoid sentences.
+
+Prefer keywords.
 
 Focus on:
 
@@ -77,6 +89,23 @@ Literature Review
 Data  
 Methods  
 Results
+
+---
+
+# Level of Analysis Examples
+
+Individual  
+Household  
+Regional  
+Country  
+
+---
+
+# Gender Focus Examples
+
+Women  
+Men  
+Mixed
 
 ---
 
