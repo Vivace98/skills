@@ -1,209 +1,162 @@
 ---
-name: english-dialogue-learning
-description: Analyze dialogue scripts to explain verbs, collocations, and sentence patterns using native-speaker thinking. Focus on B2+ expressions and spoken English patterns.
----
 
-# Native Dialogue Decoder
+name: italian-text-scanner
+description: Scan Italian text, dialogue, or subtitles and extract verbs with conjugations, common nouns with gender, adjectives, and unique grammar patterns for language learning.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This skill analyzes English dialogue scripts to help learners understand how native speakers use verbs, collocations, and sentence patterns in conversation.
+# Italian Text Scanner
 
-The goal is to train **native speaker thinking**, not just memorizing translations.
+This skill analyzes Italian text, dialogue, transcripts, or subtitles and extracts the most important linguistic elements for learning.
 
-Focus level:
+The input should always be treated as **natural language text**, not as isolated subtitle fragments.
 
-B2 and above expressions.
+The goal is to quickly reveal the structure of the language by identifying:
+
+• verbs and their conjugation
+• common nouns and their gender
+• adjectives
+• grammar patterns appearing in the text
+
+The analysis should **avoid sentence-by-sentence commentary** and instead organize results by linguistic category.
 
 ---
 
 # Input
 
-User provides a dialogue or script.
+User may provide:
+
+• Italian text
+• dialogue
+• subtitles
+• transcripts
+• paragraphs
 
 Example:
 
-A: I was thinking about dropping by later.  
-B: Sure, just give me a heads-up.
+Gli ho dato il libro ieri perché lo voleva leggere.
 
 ---
 
-# Task 1 — Key Verb and Collocation Analysis
+# Analysis Procedure
 
-Identify important language elements:
+Read the entire text first.
 
-• verbs  
-• phrasal verbs  
-• verb phrases  
-• collocations  
-• pragmatic softeners  
+Then extract linguistic elements and organize them into four sections.
 
-Explain each expression using this structure:
+Do not analyze sentence-by-sentence.
 
-### Expression
+Avoid repeating the same grammar point multiple times.
 
-Meaning
+Prioritize **recognition and learning efficiency** over long explanations.
 
-Nuance in conversation
+---
 
-Native speaker intuition
+# Section 1 — Verbs
 
-Similar expressions and differences
+List verbs appearing in the text.
 
-Example sentences
+For each verb include:
+
+• verb form appearing in the text
+• infinitive
+• tense
+• person/number
+
+Example format:
+
+ho dato → dare | passato prossimo | 1st singular
+voleva → volere | imperfetto | 3rd singular
+arrivi → arrivare | congiuntivo presente | 3rd singular
+
+Focus on **recognizing conjugation patterns**.
+
+Do not repeat the same verb multiple times unless the tense changes.
+
+---
+
+# Section 2 — Common Nouns
+
+Extract common nouns appearing in the text.
+
+For each noun include:
+
+• article if present
+• gender
+• plural form if useful
 
 Example:
 
-Expression
+il libro → masculine | plural: libri
+la macchina → feminine | plural: macchine
+la bandiera → feminine | plural: bandiere
 
-drop by
-
-Meaning
-
-visit briefly
-
-Native intuition
-
-Native speakers imagine a **short casual visit that is not formally planned**.
-
-Similar expressions
-
-stop by  
-come by  
-swing by
-
-Difference
-
-stop by = most common  
-swing by = slightly more casual
+Prioritize **frequent or useful nouns**, not every noun in the text.
 
 ---
 
-# Task 2 — Native Speaker Concept Explanation
+# Section 3 — Adjectives
 
-For important words, explain the **conceptual metaphor** used by native speakers.
+List adjectives appearing in the text.
+
+For each adjective include:
+
+• base form
+• agreement examples if visible
 
 Example:
 
-IN
+rosso → rossa / rossi / rosse
+nero → nera / neri / nere
+verde → invariant in singular, plural: verdi
 
-Native speakers imagine **a container**.
-
-If something is “in”, it is **inside the boundary of a space**.
-
-This space may be:
-
-physical  
-social  
-emotional  
-abstract
-
-Examples
-
-in love  
-in trouble  
-in a situation  
-in the room
+Do not repeat the same adjective multiple times.
 
 ---
 
-# Task 3 — Sentence Pattern Analysis
+# Section 4 — Grammar Points
 
-Explain how sentences are structured.
-
-Focus on:
-
-• softening structures  
-• spoken English patterns  
-• natural conversation logic
-
-Example:
-
-I was thinking about...
-
-Function
-
-soft suggestion
-
-Meaning
-
-The speaker is sharing a thought instead of imposing an opinion.
-
-Why native speakers use it
-
-It sounds more polite and indirect.
-
----
-
-# Task 4 — Chinese Learner Pitfalls
-
-Explain mistakes Chinese learners commonly make.
-
-Example
-
-Wrong
-
-I very like this movie.
-
-Correct
-
-I really like this movie.
-
-Reason
-
-In English, adverbs modify verbs differently from Chinese structure.
-
----
-
-# Task 5 — Learning Text Creation
-
-Use the vocabulary from the script to generate two texts.
-
----
-
-### Text A — Mixed Chinese + English
+Identify grammar structures appearing in the text.
 
 Rules:
 
-target vocabulary stays in English  
-other words are simple Chinese
+• list each grammar point only once
+• explanations should be short
+• prioritize structures useful for learners
 
-Example
+Examples:
 
-我刚刚在想要不要 **drop by** 你家一下，  
-但我怕会 **bother** 你。
+passato prossimo
+imperfetto
+reflexive verbs
+direct object pronouns
+indirect object pronouns
+subjunctive clauses
+preposition + article combinations
+
+Example output:
+
+Grammar points in this text:
+
+• passato prossimo
+• indirect object pronouns (gli)
+• imperfetto for background description
 
 ---
 
-### Text B — Full English
+# Style Rules
 
-Rules
+Follow these principles:
 
-simple grammar  
-natural spoken English  
-reuse key expressions
+• Do not analyze sentence-by-sentence
+• Do not repeat the same grammar pattern
+• Avoid unnecessary linguistic theory
+• Keep explanations concise
+• Prioritize high-frequency vocabulary
+• Focus on recognition rather than translation
 
-Example
+The output must always follow this structure:
 
-I was thinking about dropping by your place earlier.  
-I just didn’t want to bother you.
-
----
-
-# Output Format
-
-Part 1  
-Verb and Collocation Analysis
-
-Part 2  
-Native Speaker Thinking
-
-Part 3  
-Sentence Pattern Explanation
-
-Part 4  
-Chinese Learner Pitfalls
-
-Part 5  
-Mixed Chinese-English Text
-
-Part 6  
-Full English Text
+1. Verbs
+2. Common Nouns
+3. Adjectives
+4. Grammar Points
