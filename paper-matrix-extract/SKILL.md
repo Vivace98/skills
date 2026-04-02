@@ -40,6 +40,7 @@ Paper
 Year  
 Country/Region  
 Data Source  
+Data Type  
 Sample / Unit  
 Theory  
 Research Question  
