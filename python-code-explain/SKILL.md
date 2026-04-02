@@ -199,3 +199,10 @@ End with a simple summary:
 What the code does  
 What statistical idea it implements  
 What the researcher should remember
+
+# Language Rule
+
+- Default output language: Chinese
+- All explanations must be written in Chinese
+- Code must remain unchanged
+- Technical terms may keep their English names when necessary
