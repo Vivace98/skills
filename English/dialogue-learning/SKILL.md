@@ -1,170 +1,209 @@
 ---
-name: italian-text-learning
-description: Scan Italian text, dialogue, or subtitles and extract verbs with conjugations, common nouns with gender, adjectives, and unique grammar patterns for language learning.
+name: e-text-learning
+description: Analyze dialogue scripts to explain verbs, collocations, and sentence patterns using native-speaker thinking. Focus on B2+ expressions and spoken English patterns.
 ---
 
-# Italian Text Scanner
+# Native Dialogue Decoder
 
-This skill analyzes Italian text, dialogue, transcripts, or subtitles and extracts the most important linguistic elements for learning.
+This skill analyzes English dialogue scripts to help learners understand how native speakers use verbs, collocations, and sentence patterns in conversation.
 
-The input should always be treated as **natural language text**, not as isolated subtitle fragments.
+The goal is to train **native speaker thinking**, not just memorizing translations.
 
-The goal is to quickly reveal the structure of the language by identifying:
+Focus level:
 
-• verbs and their conjugation  
-• common nouns and their gender  
-• adjectives  
-• grammar patterns appearing in the text  
-
-The analysis should **avoid sentence-by-sentence commentary** and instead organize results by linguistic category.
+B2 and above expressions.
 
 ---
 
 # Input
 
-The user may provide:
-
-- Italian text
-- dialogue
-- subtitles
-- transcript
-- paragraph
-
-Example input:
-
-Gli ho dato il libro ieri perché lo voleva leggere.
-
----
-
-# Analysis Procedure
-
-1. Read the entire text first.
-2. Identify verbs, nouns, adjectives, and grammar structures.
-3. Organize the results into **four sections**.
-4. Avoid sentence-by-sentence explanations.
-5. Avoid repeating the same grammar point multiple times.
-
-The goal is **recognition and structural clarity**, not detailed linguistic theory.
-
----
-
-# Section 1 — Verbs
-
-List verbs appearing in the text.
-
-For each verb include:
-
-- verb form appearing in the text  
-- infinitive  
-- tense  
-- person/number  
-
-Example format:
-
-ho dato → dare | passato prossimo | 1st singular  
-voleva → volere | imperfetto | 3rd singular  
-arrivi → arrivare | congiuntivo presente | 3rd singular  
-
-Rules:
-
-- focus on conjugation recognition
-- do not repeat the same verb multiple times unless the tense changes
-
----
-
-# Section 2 — Common Nouns
-
-Extract common nouns appearing in the text.
-
-For each noun include:
-
-- article if present
-- gender
-- plural form if useful
+User provides a dialogue or script.
 
 Example:
 
-il libro → masculine | plural: libri  
-la macchina → feminine | plural: macchine  
-la bandiera → feminine | plural: bandiere  
-
-Rules:
-
-- prioritize frequent and useful nouns
-- avoid listing every minor noun in the text
+A: I was thinking about dropping by later.  
+B: Sure, just give me a heads-up.
 
 ---
 
-# Section 3 — Adjectives
+# Task 1 — Key Verb and Collocation Analysis
 
-List adjectives appearing in the text.
+Identify important language elements:
 
-For each adjective include:
+• verbs  
+• phrasal verbs  
+• verb phrases  
+• collocations  
+• pragmatic softeners  
 
-- base form
-- agreement examples if visible
+Explain each expression using this structure:
+
+### Expression
+
+Meaning
+
+Nuance in conversation
+
+Native speaker intuition
+
+Similar expressions and differences
+
+Example sentences
 
 Example:
 
-rosso → rossa / rossi / rosse  
-nero → nera / neri / nere  
-verde → invariant in singular | plural: verdi  
+Expression
+
+drop by
+
+Meaning
+
+visit briefly
+
+Native intuition
+
+Native speakers imagine a **short casual visit that is not formally planned**.
+
+Similar expressions
+
+stop by  
+come by  
+swing by
+
+Difference
+
+stop by = most common  
+swing by = slightly more casual
+
+---
+
+# Task 2 — Native Speaker Concept Explanation
+
+For important words, explain the **conceptual metaphor** used by native speakers.
+
+Example:
+
+IN
+
+Native speakers imagine **a container**.
+
+If something is “in”, it is **inside the boundary of a space**.
+
+This space may be:
+
+physical  
+social  
+emotional  
+abstract
+
+Examples
+
+in love  
+in trouble  
+in a situation  
+in the room
+
+---
+
+# Task 3 — Sentence Pattern Analysis
+
+Explain how sentences are structured.
+
+Focus on:
+
+• softening structures  
+• spoken English patterns  
+• natural conversation logic
+
+Example:
+
+I was thinking about...
+
+Function
+
+soft suggestion
+
+Meaning
+
+The speaker is sharing a thought instead of imposing an opinion.
+
+Why native speakers use it
+
+It sounds more polite and indirect.
+
+---
+
+# Task 4 — Chinese Learner Pitfalls
+
+Explain mistakes Chinese learners commonly make.
+
+Example
+
+Wrong
+
+I very like this movie.
+
+Correct
+
+I really like this movie.
+
+Reason
+
+In English, adverbs modify verbs differently from Chinese structure.
+
+---
+
+# Task 5 — Learning Text Creation
+
+Use the vocabulary from the script to generate two texts.
+
+---
+
+### Text A — Mixed Chinese + English
 
 Rules:
 
-- do not repeat the same adjective multiple times
-- highlight agreement patterns when visible
+target vocabulary stays in English  
+other words are simple Chinese
+
+Example
+
+我刚刚在想要不要 **drop by** 你家一下，  
+但我怕会 **bother** 你。
 
 ---
 
-# Section 4 — Grammar Points
+### Text B — Full English
 
-Identify grammar structures appearing in the text.
+Rules
 
-Rules:
+simple grammar  
+natural spoken English  
+reuse key expressions
 
-- list each grammar point only once
-- explanations should be concise
-- prioritize grammar useful for learners
+Example
 
-Examples:
-
-passato prossimo  
-imperfetto  
-reflexive verbs  
-direct object pronouns  
-indirect object pronouns  
-subjunctive clauses  
-preposition + article combinations  
-
-Example output:
-
-Grammar points in this text:
-
-• passato prossimo  
-• indirect object pronouns (gli)  
-• imperfetto for background description
+I was thinking about dropping by your place earlier.  
+I just didn’t want to bother you.
 
 ---
 
-# Style Rules
+# Output Format
 
-Follow these principles:
+Part 1  
+Verb and Collocation Analysis
 
-- Do not analyze sentence-by-sentence
-- Do not repeat the same grammar pattern
-- Avoid unnecessary linguistic theory
-- Keep explanations concise
-- Prioritize high-frequency vocabulary
-- Focus on recognition rather than translation
+Part 2  
+Native Speaker Thinking
 
----
+Part 3  
+Sentence Pattern Explanation
 
-# Output Structure
+Part 4  
+Chinese Learner Pitfalls
 
-Always organize the output in this order:
+Part 5  
+Mixed Chinese-English Text
 
-1. Verbs  
-2. Common Nouns  
-3. Adjectives  
-4. Grammar Points
+Part 6  
+Full English Text
