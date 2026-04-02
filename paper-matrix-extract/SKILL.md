@@ -1,11 +1,11 @@
 ---
 name: paper-matrix-extract
-description: Extract structured information from an academic research paper and generate one literature matrix row for Excel. Designed for demography, migration, and social science literature screening.
+description: Extract structured information from an academic research paper and generate a literature matrix entry for Excel. Designed for demography, migration, and social science literature screening.
 ---
 
 # Paper Matrix Extract
 
-This skill extracts key structural information from an academic paper and formats it as **ONE literature matrix row**.
+This skill extracts key structural information from an academic paper and formats it as a **literature matrix entry for Excel**.
 
 The purpose is **rapid literature screening**, not deep analysis.
 
@@ -16,13 +16,13 @@ Use this skill when the user:
 - asks to extract literature information
 - wants to fill a literature review matrix
 
-The output should help the user quickly build a **literature database in Excel or Notion**.
+The output helps the user build a **structured literature database**.
 
 ---
 
 # Extraction Principles
 
-Focus on **core research structure**, not full summarization.
+Focus on **core research structure**.
 
 Prefer **short phrases**.
 
@@ -30,9 +30,9 @@ Do NOT generate long explanations.
 
 If information is missing in the paper, write:
 
-未明确说明
+none
 
-When extracting information, prioritize the following sections:
+When extracting information, prioritize:
 
 Introduction  
 Literature Review  
@@ -44,13 +44,18 @@ Results
 
 # Output Format
 
-Always output **ONE single row only**.
+Always output **exactly TWO lines only**.
 
-Do not add explanations before or after the row.
+Line 1 = column names  
+Line 2 = extracted values
 
-Use **TSV format (Tab-Separated Values)** so the user can paste directly into Excel.
+Use **TSV format (Tab-Separated Values)** so it can be pasted directly into Excel.
 
-Column order must match exactly:
+Do NOT add explanations before or after the two lines.
+
+---
+
+# Line 1 (Column Names)
 
 Paper  
 Year  
@@ -59,6 +64,7 @@ Data Source
 Sample / Unit  
 Theory  
 Research Question  
+Outcome Type  
 DV  
 Main IV  
 Controls  
@@ -76,71 +82,73 @@ Read Status
 
 ---
 
-# Field Guidelines
+# Line 2 (Extracted Information)
 
-Paper  
-Author + year (e.g. Carling 2002)
+Extract corresponding information from the paper.
 
-Year  
-Publication year
+Rules:
 
-Country/Region  
-Geographical focus of the study
+• Use **short phrases**  
+• If missing → **none**  
+• Maintain exact column alignment
 
-Data Source  
-Survey / census / register / panel / administrative data
+---
 
-Sample / Unit  
-Individuals / households / regions etc.
+# Outcome Type Guidelines
 
-Theory  
-Conceptual or theoretical framework used
+Identify the **type of outcome studied**.
 
-Research Question  
-Main question addressed by the study
+Examples:
 
-DV  
-Dependent variable
+Migration aspiration  
+Migration intention  
+Migration behavior  
+Fertility  
+Mortality  
+Labor market outcome  
+Education outcome
 
-Main IV  
-Key explanatory variable
+---
 
-Controls  
-Major control variables
+# Method Type Examples
 
-Mechanism  
-Mechanism variables tested (if any)
+Regression  
+Event history analysis  
+Multilevel model  
+Qualitative analysis  
+Mixed methods  
 
-Method Type  
-Regression / event history / multilevel / qualitative etc.
+---
 
-Model Specification  
-Logit / OLS / hazard model / fixed effects / random effects etc.
+# Model Specification Examples
 
-Identification Strategy  
-IV / natural experiment / matching / none etc.
+Logit  
+Probit  
+OLS  
+Hazard model  
+Fixed effects  
+Random effects  
 
-Main Findings  
-Key empirical results (short phrases)
+---
 
-Contribution  
-Main contribution claimed by the authors
+# Identification Strategy Examples
 
-Key Theory References  
-Foundational theoretical literature cited
+IV  
+Natural experiment  
+Matching  
+Panel fixed effects  
+none  
 
-Closely Related Studies  
-Empirical papers addressing a similar question
+---
 
-Research Gap  
-Remaining unanswered questions
-
-Priority  
+# Priority
 
 High — core theory or key empirical study  
 Medium — useful supporting literature  
-Low — peripheral background literature
+Low — peripheral background literature  
 
-Read Status  
+---
 
-Default value: Not read
+# Read Status
+
+Default value = Not read
