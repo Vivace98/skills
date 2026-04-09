@@ -1,94 +1,94 @@
 # Simple Tarot Interpretation Guide
 
-This file defines how to generate **simple interpretations** for daily tarot draws.
+This file defines how to generate a simple interpretation for a daily tarot draw.
 
-The goal is to provide a **short reflective hint**, not a full analysis.
+The purpose is to provide a short reflective hint, not a deep analysis.
 
-Tarot here is used for **daily reflection**, not prediction.
+Tarot here is used for daily reflection, not prediction.
 
 ---
 
-# Interpretation Process
+## Interpretation Process
 
 When the user requests a simple interpretation:
 
-1. Look up each card in `rider-waite-cards.md`.
-2. Identify whether the card is upright or reversed.
-3. Use the corresponding core meaning.
-4. Convert the meaning into **one short reflective sentence**.
+1. Read the card names from the draw result.
+2. Look up each card in `rider-waite-cards.md`.
+3. Check whether the card is upright or reversed.
+4. Use the corresponding core meaning.
+5. Rewrite that meaning into one short reflective sentence.
 
-Do not copy the keywords directly.  
-Rewrite them naturally.
+Do not copy the keyword list mechanically.
+Turn it into natural language.
 
 ---
 
-# Sentence Style
+## Tone Rules
 
-Each card should produce **one short sentence**.
-
-Tone guidelines:
+The tone should be:
 
 - calm
+- simple
 - reflective
-- neutral
 - non-predictive
-- concise
+- emotionally steady
 
 Avoid:
 
 - dramatic language
-- fortune-telling statements
-- predicting events
-- absolute claims
+- mystical exaggeration
+- deterministic statements
+- future prediction
+- heavy psychological analysis
 
-Tarot should be treated as a **symbolic mirror of today's energy**.
+This is a daily reflection tool.
 
 ---
 
-# Output Format
+## Output Rules
 
-The interpretation must follow this structure:
+- Write exactly one short sentence for each card.
+- Keep each sentence concise.
+- Do not force the three cards into one final summary unless it feels natural.
+- Do not invent events.
+- Focus on today's energy, mood, rhythm, or reminder.
+
+---
+
+## Output Format
+
+Use this format:
 
 Simple interpretation
 
 Card 1 — [Card Name]  
-[One reflective sentence]
+[One short reflective sentence]
 
 Card 2 — [Card Name]  
-[One reflective sentence]
+[One short reflective sentence]
 
 Card 3 — [Card Name]  
-[One reflective sentence]
+[One short reflective sentence]
 
 ---
 
-# Example
-
-Cards drawn:
-
-1. The Hermit  
-2. Three of Cups (Reversed)  
-3. The Star  
-
-Example interpretation:
+## Example
 
 Simple interpretation
 
 Card 1 — The Hermit  
-today may invite quiet reflection and a little distance from external noise.
+today may invite quiet reflection and a little distance from outside noise.
 
 Card 2 — Three of Cups (Reversed)  
-social interactions may feel slightly draining or out of balance.
+social energy may feel slightly drained or less harmonious than usual.
 
 Card 3 — The Star  
-a sense of hope or gentle healing may be quietly returning.
+a soft sense of hope or healing may be returning in the background.
 
 ---
 
-# Important Principle
+## Core Principle
 
-Tarot in this system is used as:
+Tarot in this system is a mirror for self-reflection.
 
-a mirror for reflection
-
-not a tool for predicting the future.
+It is not a prophecy.
