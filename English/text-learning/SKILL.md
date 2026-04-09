@@ -153,57 +153,16 @@ In English, adverbs modify verbs differently from Chinese structure.
 
 ---
 
-# Task 5 — Learning Text Creation
-
-Use the vocabulary from the script to generate two texts.
-
----
-
-### Text A — Mixed Chinese + English
-
-Rules:
-
-target vocabulary stays in English  
-other words are simple Chinese
-
-Example
-
-我刚刚在想要不要 **drop by** 你家一下，  
-但我怕会 **bother** 你。
-
----
-
-### Text B — Full English
-
-Rules
-
-simple grammar  
-natural spoken English  
-reuse key expressions
-
-Example
-
-I was thinking about dropping by your place earlier.  
-I just didn’t want to bother you.
-
----
-
 # Output Format
 
-Part 1  
+# Part 1  
 Verb and Collocation Analysis
 
-Part 2  
+# Part 2  
 Native Speaker Thinking
 
-Part 3  
+# Part 3  
 Sentence Pattern Explanation
 
-Part 4  
+# Part 4  
 Chinese Learner Pitfalls
-
-Part 5  
-Mixed Chinese-English Text
-
-Part 6  
-Full English Text
