@@ -5,93 +5,104 @@ description: Draw three random Rider-Waite tarot cards for daily reflection and 
 
 # Daily Tarot Skill
 
-This skill draws three random tarot cards for daily reflection.
+This skill is a minimal daily tarot reflection tool.
 
-The purpose is **not prediction**, but **symbolic reflection**.
+It does only one thing:
 
-The workflow is intentionally simple:
+- draw 3 random Rider-Waite tarot cards
+- optionally give a simple interpretation
 
-1. Draw three random cards from the Rider-Waite deck.
-2. Show the cards.
-3. Ask whether the user wants a simple interpretation.
-4. If yes, read the file `simple-reading.md` in the tarot workspace.
-
-No deep analysis is provided automatically.
+Tarot here is used as a symbolic mirror, not as prediction.
 
 ---
 
-# Workflow
+## Workspace
 
-When the user activates the tarot skill:
+The tarot workspace contains these files:
 
-## Step 1 — Draw Cards
+- `tarot/cards-list.md`
+- `tarot/rider-waite-cards.md`
+- `tarot/simple-reading.md`
+- `tarot/tarot-agent.md`
 
-Randomly draw three cards from the Rider-Waite deck.
+Use them when running this skill.
 
-Each card has:
+---
 
-- name
-- optional reversed orientation (30% probability)
+## Workflow
 
-Example output:
+### Step 1 — Draw 3 cards
+
+Use `tarot/cards-list.md` as the official deck list.
+
+Rules:
+
+- draw exactly 3 different cards
+- no repeated cards
+- each card has a 30% chance of being reversed
+- show the cards first without interpretation
+
+Use this output format:
 
 Today's tarot draw
 
-1. The Hermit  
-2. Three of Cups (Reversed)  
-3. The Star  
+1. [Card Name]
+2. [Card Name]
+3. [Card Name]
 
-Do not interpret yet.
+If reversed, write:
+
+[Card Name] (Reversed)
 
 ---
 
-## Step 2 — Ask for interpretation
+### Step 2 — Ask for simple interpretation
 
-Ask the user:
+After showing the 3 cards, ask:
 
 Would you like a simple interpretation? (yes / no)
 
 ---
 
-## Step 3 — If user says yes
+### Step 3 — If the user says yes
 
-Read the file:
+Read:
 
-tarot/simple-reading.md
+- `tarot/simple-reading.md`
+- `tarot/rider-waite-cards.md`
 
-Then generate a **short interpretation** for each card using the meanings from:
-
-tarot/rider-waite-cards.md
+Then generate a short interpretation.
 
 Rules:
 
-- 1 sentence per card
-- calm tone
-- reflective, not predictive
-- no dramatic language
+- one short sentence per card
+- calm and reflective tone
+- no prediction
+- no dramatic wording
+- focus on today's energy or reflection
 
-Example format:
+Use this format:
 
 Simple interpretation
 
-Card 1 — The Hermit  
-today may invite quiet reflection and solitude.
+Card 1 — [Card Name]  
+[One short reflective sentence]
 
-Card 2 — Three of Cups (Reversed)  
-social energy may feel slightly drained.
+Card 2 — [Card Name]  
+[One short reflective sentence]
 
-Card 3 — The Star  
-hope and healing are quietly returning.
+Card 3 — [Card Name]  
+[One short reflective sentence]
 
 ---
 
-# Principles
+## Principles
 
-Tarot here is used as a **mirror**, not a prophecy.
+This skill should remain:
 
-The interpretation should:
+- simple
+- steady
+- reflective
+- non-predictive
 
-- remain neutral
-- encourage reflection
-- avoid deterministic statements
-- avoid predicting future events
+Do not add deep analysis unless explicitly requested outside this workflow.
