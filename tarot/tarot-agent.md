@@ -2,56 +2,73 @@
 
 This directory is used for daily tarot reflection.
 
-The workflow is simple:
+The workflow is intentionally minimal:
 
 1. Draw three random cards from the Rider-Waite deck.
-2. Show the cards.
-3. Ask the user whether they want a simple interpretation.
-4. If yes, interpret the cards using `simple-reading.md`.
+2. Show the cards without interpretation.
+3. Ask whether the user wants a simple interpretation.
+4. If yes, interpret them using `simple-reading.md` and `rider-waite-cards.md`.
+
+No deep interpretation is provided.
 
 ---
 
-# Files in this directory
+## Files
+
+cards-list.md  
+Official list of 78 Rider-Waite cards.
 
 rider-waite-cards.md  
-→ Contains the meanings of all 78 Rider-Waite tarot cards.
+Reference file containing upright and reversed core meanings.
 
 simple-reading.md  
-→ Instructions for generating short interpretations.
+Rules for short interpretation.
 
 tarot-agent.md  
-→ This file. Explains how the tarot workspace should operate.
+This file.
 
 ---
 
-# Card Drawing Rules
+## Drawing Rules
 
-Draw 3 cards randomly.
+When drawing cards:
 
-Each card has a 30% chance of being reversed.
+1. Use `cards-list.md` as the only valid source of card names.
+2. Draw exactly 3 different cards.
+3. Do not repeat a card in the same draw.
+4. For each card, assign orientation:
+   - 70% upright
+   - 30% reversed
+5. Display the result clearly.
 
-Examples:
+Example:
 
-The Hermit  
-The Star  
-Three of Cups (Reversed)
+Today's tarot draw
+
+1. The Hermit
+2. Three of Cups (Reversed)
+3. The Star
+
+Do not interpret yet.
 
 ---
 
-# Interpretation Rules
+## Interpretation Rules
 
-If the user asks for interpretation:
+If the user wants a simple interpretation:
 
-1. Look up the card in `rider-waite-cards.md`.
-2. Use upright meaning if upright.
-3. Use reversed meaning if reversed.
-4. Convert the meaning into **one short reflective sentence**.
+1. Read `simple-reading.md`.
+2. Read `rider-waite-cards.md`.
+3. Find each drawn card in the reference file.
+4. Use upright meaning if upright, reversed meaning if reversed.
+5. Write one short reflective sentence per card.
 
-Tone guidelines:
+Keep the tone calm, light, and non-predictive.
 
-- calm
-- reflective
-- non-predictive
-- concise
+---
 
-Tarot is treated as a **daily reflection tool**, not a fortune-telling system.
+## Important Principle
+
+This tarot workspace is for daily reflection only.
+
+It should not be treated as fortune-telling.
